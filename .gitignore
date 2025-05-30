@@ -1,0 +1,23 @@
+# PyCharm
+.idea/
+
+# Virtuální prostředí
+.venv/
+env/
+venv/
+
+# Kompilované soubory Pythonu
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logy a dočasné soubory
+*.log
+*.tmp
+
+# Mac OS a Windows systémové soubory
+.DS_Store
+Thumbs.db
+
+# Uložené pozice nebo stavy hry
+savegame.json
