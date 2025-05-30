@@ -1,0 +1,54 @@
+<MenuScreen>:
+    FloatLayout:
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "assets/images/background.jpg"
+
+        Label:
+            text: ""
+            font_size: '40sp'
+            pos_hint: {"center_x": 0.5, "top": 0.95}
+            color: 1, 1, 1, 1
+
+        Button:
+            text: "Nová hra"
+            size_hint: (0.3, 0.1)
+            pos_hint: {"center_x": 0.76, "center_y": 0.59}
+            on_release: root.start_new_game()
+
+        Button:
+            text: "Pokračovat"
+            size_hint: (0.3, 0.1)
+            pos_hint: {"center_x": 0.76, "center_y": 0.46}
+            on_release: root.continue_game()
+
+        Button:
+            text: "Skóre"
+            size_hint: (0.3, 0.1)
+            pos_hint: {"center_x": 0.76, "center_y": 0.34}
+            on_release: root.show_score()
+
+        Button:
+            text: "Exit"
+            size_hint: (0.3, 0.1)
+            pos_hint: {"center_x": 0.76, "center_y": 0.21}
+            on_release: root.exit_game()
+
+<GameScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        RelativeLayout:
+            id: container
+
+        Label:
+            text:
+            size_hint_y: None
+            height: "150dp"
+            text_size: self.width, None
+            halign: "left"
+            valign: "top"
+            padding: 10, 10
+            color: 1, 1, 1, 1
